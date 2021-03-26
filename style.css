@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe,  h1,h2,h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    
+    vertical-align: baseline;
+    background: transparent;
+   
+    box-sizing: border-box;
+   
+}
+
+body{
+    font-family: "karla",sans-serif ;
+    font-size: 16px;  
+    width: 1440px;
+    height: 800px;  
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "join    join"
+                         "monthly why";
+    width: 640px;
+    height: 480px;
+    
+}
+
+
+
+.join-section{
+    background-color: white;
+    padding: 5%;
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+    grid-area: join;
+}
+
+
+.join-section h2{
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 30px;
+}
+
+.join-section h3{
+    color: hsl(71, 73%, 54%);
+}
+
+.join-section p{
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5em;
+}
+
+.monthly-section{
+    grid-area: monthly;
+    background-color:hsl(179, 62%, 43%);
+    border-radius: 0 0 0 5px;
+    padding: 10%;
+    color: white;
+}
+
+.monthly-section h3{
+    margin-bottom: 20px;
+}
+.monthly-section span:nth-child(2){
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.monthly-section span:nth-child(3){
+   
+    opacity: 80%;
+     
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+    
+}
+
+.button{
+    background-color: hsl(71, 73%, 54%);
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+.why-section{
+    grid-area: why;
+    background-color:hsl(179, 62%, 43%);
+    border-radius: 0 0 5px 0;
+    opacity: 80%;
+    color: white;
+    padding: 10%;
+    line-height: 20px;
+}
+
+ul{
+    margin-top: 20px;
+    list-style-type: none;
+    opacity: 70%;;
+    font-size: 0.9rem;
+}
+
+@media (max-width:375px){
+ body{
+    width: 375px;
+    height: auto; 
+ }
+
+ .main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20%;
+    grid-template-areas: "join"
+                         "monthly"
+                          "why";
+    
+    width: 80%;
+    
+
+    
+}
+}
